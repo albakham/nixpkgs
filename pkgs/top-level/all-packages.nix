@@ -185,6 +185,8 @@ in
 
   protoc-gen-doc = callPackage ../development/tools/protoc-gen-doc {};
 
+  ptags = callPackage ../development/tools/misc/ptags { };
+
   demoit = callPackage ../servers/demoit { };
 
   deviceTree = callPackage ../os-specific/linux/device-tree {};
@@ -6413,6 +6415,8 @@ in
   sacd = callPackage ../tools/cd-dvd/sacd { };
 
   safe = callPackage ../tools/security/safe { };
+
+  safety-cli = with python3.pkgs; toPythonApplication safety;
 
   safe-rm = callPackage ../tools/system/safe-rm { };
 
