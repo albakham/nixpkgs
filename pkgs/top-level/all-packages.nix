@@ -810,6 +810,8 @@ in
 
   inherit (nodePackages) bitwarden-cli;
 
+  bitwarden-simple-cli = python3Packages.callPackage ../tools/security/bitwarden-simple-cli { };
+
   bitwarden_rs = callPackage ../tools/security/bitwarden_rs {
     inherit (darwin.apple_sdk.frameworks) Security CoreServices;
   };
